@@ -154,4 +154,61 @@ TARGET_OTA_ASSERT_DEVICE := olivelite
 #BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 #TARGET_COPY_OUT_VENDOR := vendor
 
+# Beginning SHRP Stuff
 
+# Device codename
+# Default (if not set): N/A
+SHRP_DEVICE_CODE := olivelite
+
+# Path of your SHRP device tree
+# Replace <device-brand> with the device brand name
+# (SHRP_DEVICE_CODE will expand to the above variable so check if that is correct)
+SHRP_PATH := device/xiaomi/$(SHRP_DEVICE_CODE)
+
+# Maintainer name
+# Default (if not set): N/A
+SHRP_MAINTAINER := SimplyJoel-LTSC
+
+# Recovery Type (for "About" section only)
+# Default (if not set): N/A
+SHRP_REC_TYPE := SAR
+
+# Device Type (for "About" section only)
+# Default (if not set): N/A
+SHRP_DEVICE_TYPE := A/B
+
+# Your device's recovery path, dont use blindly
+# No default
+SHRP_REC := /dev/block/by-name/recovery
+
+# Emergency DownLoad mode (0 = no EDL mode, 1 = EDL mode available)
+# Default (if not set): 0
+SHRP_EDL_MODE := 1
+
+# If your device has an external sdcard
+# Default (if not set): /
+SHRP_EXTERNAL := /external_sd
+
+# USB OTG path
+# Default (if not set): /
+SHRP_OTG := /usb_otg
+
+# Flashlight: (0 = disable, 1 = enable)
+# Default (if not set): 0
+SHRP_FLASH := 1
+
+# SHRP Express, enables on-the-fly theme patching (also persistent) + persistent lock
+# Default (if not set) is not using Express
+# Set this variable when true ONLY (do not use "false" or similiar)
+SHRP_EXPRESS := true
+
+# SHRP Dark mode, use this flag to have dark theme set by default
+# Default (if not set) is not using DARK mode
+# Set this variable when true ONLY (do not use "false" or similiar)
+SHRP_DARK := true
+
+# SHRP padding flag (for rounded corner devices only)
+# You have to change these values according to your device's roundness.
+SHRP_STATUSBAR_RIGHT_PADDING := 40
+# Default (for LEFT): 20
+SHRP_STATUSBAR_LEFT_PADDING := 40
