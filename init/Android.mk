@@ -22,7 +22,7 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_C_INCLUDES := \
     system/core/base/include \
     system/core/init
-LOCAL_SRC_FILES := init_olivelite.cpp
-LOCAL_MODULE := libinit_olivelite
+LOCAL_SRC_FILES := init_olivewood.cpp
+LOCAL_MODULE := libinit_olivewood
 
 include $(BUILD_STATIC_LIBRARY)
