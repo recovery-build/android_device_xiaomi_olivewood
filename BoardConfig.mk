@@ -140,6 +140,37 @@ PLATFORM_SECURITY_PATCH := 2025-12-31
 PLATFORM_VERSION := 127
 PLATFORM_VERSION_LAST_STABLE := $(PLATFORM_VERSION)
 
+# SHRP Flags
+# NOTE - Dont use '-' or blank spaces in flag values , otherwise it will create build errors or other bugs in recovery (Excluding SHRP_PATH,SHRP_REC). 
+# Path of your SHRP Tree
+SHRP_PATH := device/xiaomi/olivewood
+# Maintainer name *
+SHRP_MAINTAINER := Karan2354
+# Device codename *
+SHRP_DEVICE_CODE := olivewood
+# Recovery Type (It can be treble,normal,SAR) [Only for About Section] *
+SHRP_REC_TYPE := Treble
+# Recovery Type (It can be A/B or A_only) [Only for About Section] *
+SHRP_DEVICE_TYPE := A/B
+# For Notch devices [Optional]
+SHRP_NOTCH := true
+# put this 0 if device has no EDL mode *
+SHRP_EDL_MODE := 1
+# Put your device's paths from fstab *
+SHRP_EXTERNAL := /external_sd
+SHRP_INTERNAL := /data
+SHRP_OTG := /usb-otg
+# Check your device's recovery path, dont use blindly *
+SHRP_REC := /dev/block/bootdevice/by-name/recovery
+
+SHRP_FLASH := 1
+SHRP_FONP_1 := /sys/class/leds/led:torch_0/brightness
+SHRP_FONP_2 := /sys/class/leds/led:torch_1/brightness
+SHRP_FONP_3 := /sys/class/leds/led:switch/brightness
+
+SHRP_DARK := true
+SHRP_EXPRESS := true
+
 # System-as-root
 
 #BOARD_BUILD_SYSTEM_ROOT_IMAGE := true //set is system.prop
