@@ -23,7 +23,7 @@
 # *not* include it on all devices, so it is safe even with hardware-specific
 # components.
 
-PLATFORM_PATH := device/xiaomi/olivelite
+PLATFORM_PATH := device/xiaomi/olivewood
 
 LC_ALL=C
 ALLOW_MISSING_DEPENDENCIES=true
@@ -82,8 +82,8 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $
 TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/recovery.fstab
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_olivelite
-TARGET_RECOVERY_DEVICE_MODULES := libinit_olivelite
+TARGET_INIT_VENDOR_LIB := libinit_olivewood
+TARGET_RECOVERY_DEVICE_MODULES := libinit_olivewood
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc/
 
 # QCOM Stuff
@@ -147,7 +147,7 @@ PLATFORM_VERSION_LAST_STABLE := $(PLATFORM_VERSION)
 #BOARD_SUPPRESS_SECURE_ERASE := true
 # OTA
 
-TARGET_OTA_ASSERT_DEVICE := olivelite
+TARGET_OTA_ASSERT_DEVICE := olivewood
 
 # Treble
 
